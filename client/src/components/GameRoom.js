@@ -20,6 +20,7 @@ const GameRoom = ({ socket, name, gameID }) => {
 		socket.emit("get_opponent_and_state", { name, gameID }, ({ opponent, state }) => {
 			setOpponent(opponent);
 			setGameState(state);
+			setWinner(state.winner || "");
 		});
 
 		//eslint-disable-next-line
