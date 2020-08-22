@@ -1,0 +1,14 @@
+@mixin back_hover {
+	color: white;
+	outline: none;
+	border: transparent;
+	background-color: rgba(0, 0, 0, 0.3);
+	border-radius: 10px;
+
+	&:hover {
+		color: var(--hover-color) !important;
+		transform: scale(0.97);
+		transition: all 0.2s;
+		cursor: pointer;
+	}
+}
